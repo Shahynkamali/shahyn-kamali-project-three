@@ -165,16 +165,152 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
-.choices {
+* {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+html {
+  font-size: 125%;
+}
+
+@font-face {
+  font-family: 'ketchup';
+  src: url("../fonts/Ketchup.otf");
+  font-style: normal;
+}
+
+header {
+  height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header h1 {
+  font-family: ketchup;
+  color: tomato;
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+.button,
+.choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button button,
+.choose button {
+  height: 80px;
+  width: 200px;
+  border-radius: 40px;
+  border: none;
+  -webkit-box-shadow: 10px 20px black;
+          box-shadow: 10px 20px black;
+  background: yellow;
+  color: tomato;
+  font-family: ketchup;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5% 0;
+}
+
+.item .randomItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid black;
+  width: 60%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.item .randomItem h2 {
+  font-family: 'Major Mono Display', monospace;
+  color: tomato;
+}
+
+.answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.answerSection {
+  position: relative;
+  background: #00aabb;
+  border-radius: .4em;
+  margin-top: 5%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.answerSection:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
 }
 /*# sourceMappingURL=style.css.map */

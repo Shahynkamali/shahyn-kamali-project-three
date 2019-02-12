@@ -1,7 +1,17 @@
-.choices {
+header{
+    height:20vh;
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h1{
+        font-family: ketchup;
+        color:tomato;
+        text-transform: capitalize;
+        font-size: 3rem;
+    }
 }

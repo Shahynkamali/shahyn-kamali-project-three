@@ -1,10 +1,36 @@
 $(document).ready(function () {
-    foodArray.forEach(fooditem => {
-        $('.choices').append(`<h1><a href="#"class="title">${fooditem.name}</a></h1><br/>
-        <div class="image">
-        <img src="${fooditem.img}">
-        </div>`);
-
+    $(".yes").hide();
+    $(".no").hide();
+    $(".pickChoice").click(function (e) {
+        e.preventDefault();
+        const randomItem = foodArray[Math.floor(Math.random() * foodArray.length)];
+        const itemHTML = `
+        <div class="randomItem">
+            <h2>You Choose ${randomItem.name}</h2>
+            <img src="${randomItem.img}"
+        </div>`
+        $('.item').html(itemHTML);
+        $(".yes").show();
+        $(".no").show();
+        $(".yes").click(function (e) { 
+            e.preventDefault();
+            const answerHTML = `
+            <div class="answerSection">
+                <img src="./images/gordy.jpeg">
+                <p>${randomItem.answer}</p>
+            </div>`
+            $('.answer').html(answerHTML);
+        });
+        $(".no").click(function (e) { 
+            e.preventDefault();
+            const answerHTML = `
+            <div class="answerSection">
+                <p>${randomItem.falseAnswer}</p>
+            </div>`
+            $('.answer').html(answerHTML);
+            
+        });
     });
-
 });
+
+
