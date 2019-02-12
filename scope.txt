@@ -1,0 +1,62 @@
+the project is a small game where the user randomly selects a food item
+once the random food items gets selected the user gets to choose between 2 questions
+
+should i put ketchup on this food item yes or no
+
+if the user chooses yes: the user gets a random selected answer
+if the user chooses no: the user get a random selected answer
+after every game the user can play all over again.
+
+
+create an array with various objects that have the following key, value names
+example:
+
+const foodItems = {
+        food = [
+        hamburger:{
+        food: true,
+        image: url("./images/hamburger"),
+        ketchup: true.
+        name: hamburger,
+         
+         
+        },
+        hotdog:{
+        food: true,
+        image: url("./images/hotdog"),
+        ketchup: false.
+        name: hotdog,
+         
+         
+        },
+        spaghetti:{
+        food: true,
+        image: url("./images/spagehtti"),
+        ketchup: false.
+        name: spagehtti,
+        Good with ketchup: true,
+         
+         
+      
+        },
+         
+        ]
+}
+
+once the user chooses a food item it get to answer 1 single question?
+should i put ketchup on this yes or no
+if the user chooses yes, it randomly get a "sassy answer prefferable a  photo of gordon ramsey coming out "
+if the user chosses no. it randomly gets a smart answer returns 
+
+
+
+step 1: create an api like object with various foodtitems stored in them with those key value pairs above
+step 2: create a an object with 2 arrays, 1 with true and 1 with false answers.
+if the item in the food object has a 
+step 3 write logic that returns a value 
+
+
+
+
+
+
