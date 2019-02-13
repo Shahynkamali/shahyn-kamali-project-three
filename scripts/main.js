@@ -16,9 +16,12 @@ $(document).ready(function () {
             e.preventDefault();
             const answerHTML = `
             <div class="answerSection">
-                <img src="./images/gordy.jpeg">
                 <p>${randomItem.answer}</p>
-            </div>`
+            </div>
+            <div class="image">
+                <img src="./images/gordy.jpeg">
+            </div>
+            `
             $('.answer').html(answerHTML);
         });
         $(".no").click(function (e) { 

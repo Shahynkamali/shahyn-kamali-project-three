@@ -1,17 +1,29 @@
 header{
     height:20vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: contain;
+    .title{
+        display:flex;
+        flex-direction: row;
 
     h1{
         font-family: ketchup;
         color:tomato;
         text-transform: capitalize;
         font-size: 3rem;
+    }
+}
+    .bottle{
+    display:flex;
+    flex-direction: column;
+    margin-top: 23%;
+        img{
+            z-index:99;
+        }
     }
 }

@@ -2,6 +2,7 @@
     display:flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
 }
 
 
@@ -12,20 +13,20 @@
     margin-top: 5%;
     width: 50%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .answerSection:after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    right: 0;
+    top: 50%;
     width: 0;
     height: 0;
     border: 20px solid transparent;
-    border-top-color: #00aabb;
-    border-bottom: 0;
-    border-left: 0;
-    margin-left: -10px;
-    margin-bottom: -20px;
+    border-left-color: #00aabb;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-right: -20px;
 }
