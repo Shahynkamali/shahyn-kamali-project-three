@@ -182,7 +182,27 @@ html {
 }
 
 header {
-  height: 20vh;
+  max-width: 1600px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  font-family: ketchup;
+  color: red;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,76 +213,59 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid green;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-size: contain;
+  margin: 3% 0;
 }
 
-header .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-header .title h1 {
-  font-family: ketchup;
-  color: tomato;
-  text-transform: capitalize;
-  font-size: 3rem;
-}
-
-header .bottle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 23%;
-}
-
-header .bottle img {
-  z-index: 99;
-}
-
-.button,
-.choose {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.button button,
-.choose button {
+button {
+  background-color: white;
+  border: 3px solid darkgreen;
+  color: black;
+  font-family: 'Suez One',serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 10px -2px black;
+          box-shadow: 10px -2px black;
   height: 80px;
   width: 200px;
   border-radius: 40px;
-  border: none;
-  -webkit-box-shadow: 10px 20px black;
-          box-shadow: 10px 20px black;
-  background: yellow;
-  color: tomato;
-  font-family: ketchup;
-  font-weight: bold;
   font-size: 30px;
 }
 
-.item {
+.choose {
+  border: 1px solid red;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section {
+  max-width: 1600px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* border:1px solid red; */
+}
+
+section .randomItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,29 +276,20 @@ header .bottle img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5% 0;
+  text-align: center;
 }
 
-.item .randomItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border: 1px solid black;
-  width: 60%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+section .randomItem h2 {
+  font-family: 'Suez One',serif;
+  text-transform: uppercase;
+  color: darkgreen;
+  text-shadow: 3px 0px black;
+  letter-spacing: 2px;
+  padding: 3% 0;
 }
 
-.item .randomItem h2 {
-  font-family: 'Major Mono Display', monospace;
-  color: tomato;
+section .randomItem img {
+  width: 100%;
 }
 
 .answer {
@@ -352,23 +346,24 @@ header .bottle img {
   color: #0F0;
   -webkit-animation-name: drop;
           animation-name: drop;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   z-index: 9;
 }
 
-/* .box:before {
-    content: "";
-    position: absolute;
-    top: -81%;
-    left: 50%;
-    border: 42px solid transparent;
-    border-bottom: 62px solid tomato;
-    transform: translateX(-50%);
+.box:before {
+  content: "";
+  position: absolute;
+  top: -81%;
+  left: 50%;
+  border: 42px solid transparent;
+  border-bottom: 62px solid tomato;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
- */
+
 @-webkit-keyframes drop {
   0% {
     top: 0;
@@ -381,6 +376,7 @@ header .bottle img {
     height: 30px;
   }
 }
+
 @keyframes drop {
   0% {
     top: 0;

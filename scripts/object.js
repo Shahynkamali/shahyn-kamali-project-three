@@ -20,9 +20,9 @@ const foodTwo = new Food('hotdog', "./images/hotdog.png", false, "sandwich", "ou
 const foodThree = new Food('spaghetti', './images/spaghetti.png', false, "entree", "restaurants", "Are you kidding me?! Did your parents drop you when you were a kid?? I can hear Nonna crying already, calling you a digrease!, I am not even going to explain to you why you shouldnt put ketchup on pasta, there is no hope for you!","Thank god! Ketchup does not belong on a hot dog! iTs gross!");
 const foodFour = new Food('fries', './images/fries.png', true, "side dish","snackbars","fries and ketchup are a match made in heaven. The sweetness of the ketchup balances out the saltiness and the savoury of fries so your mouth is like: this is nice, please give me more!", "whats wrong you with you psychopath! what do you use as a condiment on your fries? Mayo? Aioli? ");
 const foodFive = new Food('pizza', './images/pizza.png', false, "entree", "snackbars/restaurants","Ketchup on pizza?.. really? I am like shocked.. Do you even have taste buds? Do you order chicken fingers in a grown up restaurant? are you lonely? its because you ketchup on your pizza!", "Congratz! you are a normal human being!");
+const foodSix = new Food('cheese sandwich', './images/sandwich.png')
 const foodArray = [];
-foodArray.push(foodOne, foodTwo, foodThree, foodFour, foodFive);
-
+foodArray.push(foodOne, foodTwo, foodThree, foodFour, foodFive, foodSix);
 
 
 

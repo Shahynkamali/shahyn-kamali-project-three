@@ -1,20 +1,30 @@
-.item{
-    display:flex;
+section{
+    max-width: 1600px;
+    width:100%;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5% 0;
-    .randomItem{
-        display: flex;
-        flex-direction: row;
-        border: 1px solid black;
-        width: 60%;
-        justify-content: space-around;
-            h2{
-            font-family: 'Major Mono Display', monospace;
-            color:tomato;
-            }
+    align-items:center;
 
-        
-    }
+    
+        /* border:1px solid red; */
+
+        .randomItem{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            
+            h2{
+                font-family: 'Suez One',serif;
+                text-transform: uppercase;
+                color:darkgreen;
+                text-shadow: 3px 0px black;
+                letter-spacing: 2px;
+                padding:3% 0;
+            }
+            img{
+                width:100%;
+            }
+        }
+    
 }

@@ -1,23 +1,3 @@
-foodArray.forEach(item => {
-  const itemChoices =`
-  <div class="addItem">
-    <div class="image">
-        <img src="${item.img}">
-    </div>
-    <p>${item.name}</p>
-  </div>
-  
-  `;
-  $('.item').append(itemChoices);
-  // init
-  // function highlight items
-  // 
-
-});
-
-
-
-
 $(document).ready(function () {
     $(".yes").hide();
     $(".no").hide();
@@ -26,14 +6,13 @@ $(document).ready(function () {
         const randomItem = foodArray[Math.floor(Math.random() * foodArray.length)];
         const itemHTML = `
         <div class="randomItem">
-            <h2>You Choose ${randomItem.name}</h2>
+            <h2>${randomItem.name}</h2>
             <img src="${randomItem.img}"
-            </div>`
-            $('.item').html(itemHTML);
-        });
+        </div>`
+        $('.item').html(itemHTML);
         $(".yes").show();
         $(".no").show();
-        $(".yes").click(function (e) { 
+        $(".yes").click(function (e) {
             e.preventDefault();
             const answerHTML = `
             <div class="answerSection">
@@ -45,15 +24,14 @@ $(document).ready(function () {
             `
             $('.answer').html(answerHTML);
         });
-        $(".no").click(function (e) { 
+        $(".no").click(function (e) {
             e.preventDefault();
             const answerHTML = `
             <div class="answerSection">
                 <p>${randomItem.falseAnswer}</p>
             </div>`
             $('.answer').html(answerHTML);
-            
+
         });
+    });
 });
-
-
