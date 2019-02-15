@@ -181,72 +181,23 @@ html {
   font-style: normal;
 }
 
-header {
-  max-width: 1600px;
-  width: 100%;
-  /* border: 1px solid black; */
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header h1 {
-  font-family: ketchup;
-  color: red;
-  font-size: 3rem;
-  margin-right: 10px;
-}
-
-.wrapper {
-  max-width: 1200px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid green;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3% 0;
 }
 
-button {
-  background-color: white;
-  border: 3px solid darkgreen;
-  color: black;
-  font-family: 'Suez One',serif;
-  text-transform: uppercase;
-  -webkit-box-shadow: 10px -2px black;
-          box-shadow: 10px -2px black;
-  height: 80px;
-  width: 200px;
-  border-radius: 40px;
-  font-size: 30px;
-}
-
-.choose {
+main {
   border: 1px solid red;
-  width: 65%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  width: 1300px;
+  background: white;
 }
 
 section {
@@ -262,10 +213,84 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* border:1px solid red; */
 }
 
-section .randomItem {
+section .wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1% 0;
+}
+
+header {
+  max-width: 1600px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
+  padding: 2% 0;
+}
+
+header h1 {
+  font-family: ketchup;
+  color: red;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+button {
+  background-color: white;
+  border: 3px solid black;
+  color: black;
+  font-family: 'Suez One',serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 10px -2px red;
+          box-shadow: 10px -2px red;
+  height: 80px;
+  width: 200px;
+  border-radius: 40px;
+  font-size: 30px;
+}
+
+.choose {
+  width: 65%;
+  display: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.restart {
+  display: none;
+}
+
+.randomItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,7 +304,7 @@ section .randomItem {
   text-align: center;
 }
 
-section .randomItem h2 {
+.randomItem h2 {
   font-family: 'Suez One',serif;
   text-transform: uppercase;
   color: darkgreen;
@@ -288,7 +313,7 @@ section .randomItem h2 {
   padding: 3% 0;
 }
 
-section .randomItem img {
+.randomItem img {
   width: 100%;
 }
 
@@ -304,14 +329,18 @@ section .randomItem img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .answerSection {
   position: relative;
-  background: #00aabb;
+  background: red;
   border-radius: .4em;
   margin-top: 5%;
   width: 50%;
+  height: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +348,12 @@ section .randomItem img {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.answerSection p {
+  font-family: 'Suez One',serif;
+  color: white;
+  padding: 10px;
 }
 
 .answerSection:after {
@@ -329,7 +364,7 @@ section .randomItem img {
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-left-color: #00aabb;
+  border-left-color: red;
   border-right: 0;
   border-top: 0;
   margin-top: -10px;
