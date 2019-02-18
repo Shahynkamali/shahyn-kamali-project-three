@@ -1,10 +1,16 @@
-.answer{
+.answerFlex{
     display:flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
+    
 }
+
+.block{
+    display: none;
+}
+
 
 
 .answerSection {

@@ -1,45 +1,27 @@
-.box {
-    display: inline-block;
-    background: tomato;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-    color: #0F0;
-    animation-name: drop;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    z-index:9;
-
-}
-
-.box:before {
-    content: "";
-    position: absolute;
-    top: -81%;
-    left: 50%;
-    border: 42px solid transparent;
-    border-bottom: 62px solid tomato;
-    transform: translateX(-50%);
-}
-@keyframes drop {
-    0% {
+.bottle{
+    width:28%;
+    img {
+        max-width: 80%;
+        width: 28%;
+        position: absolute;
         top: 0;
-        left: 80px;
-
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        animation-name: show;
+        animation-delay: 4s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+    @keyframes show {
+        to {
+            opacity: 1;
+        }
     }
 
-
-    100% {
-        top: 300px;
-        left: 80px;
-        width: 80%;
-        height: 30px;
-
-
-    }
-
-
-
-
+    
 }

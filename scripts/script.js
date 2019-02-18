@@ -1,9 +1,39 @@
+anime({
+    targets: '#Capa_1 .path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 10000,
+    delay: function (el, i) {
+        return i * 2000
+    },
+    direction: 'alternate',
+    loop: false
+});
+
+
+const playAudio = () =>{
+    const sound = document.getElementById("myAudio");
+    sound.play();
+}
+
+const dropKetchup = () =>{
+    $('.squirtEffect').on('click', function () {
+        playAudio();
+        $('.box').addClass('drop');
+        setTimeout(function () {
+            $('.box').removeClass('drop');
+        }, 1000);
+    });
+}
+
+
 
 let i = 0;
 const time = 150;
 const imageArray = [];
 const num = Math.floor(Math.random() * 100 + 1);
 foodArray.forEach(food => imageArray.push(food.img));
+
 const changeImg = () =>{
     document.slide.src = imageArray[i];
     if(i < imageArray.length - 1 ){
@@ -11,39 +41,49 @@ const changeImg = () =>{
     } else{
         i = 0
     }
-const interval = setTimeout('changeImg()', time);
-if (interval == num){
-    clearInterval(interval);
-    $('.slideshow').hide();
-    $('.pickChoice').hide();
-    $('.item').show();
+    const interval = setTimeout('changeImg()', time);
+    if (interval == num){
+        clearInterval(interval);
+        $('.slideshow').hide();
+        $('.pickChoice').hide();
+        $('.item').show();
+    }
 }
-console.log(`this is the interval${interval}`)
-}
-console.log(`this in the number:${num}`)
 
 
 const angryGordy = (answerHTML) =>{
-    $('.answer').html(answerHTML);
+    $('.answer').removeClass('block').addClass('answerFlex').html(answerHTML);
+    
     
 }
 
 const initGame = (randomItem) =>{
+    $('svg').delay(4000).fadeOut();
     $(".pickChoice").click(function (e) {
         e.preventDefault();
+        $('.ketchupBottle').hide();
         $('.item').hide();
+        $('.choose').hide();
         changeImg()
          randomItem = foodArray[Math.floor(Math.random() * foodArray.length)];
         const itemHTML = `
         <div class="randomItem">
             <h2>${randomItem.name}</h2>
-            <img src="${randomItem.img}"
+            <img src = "${randomItem.img}"
             </div>`
         $('.item').html(itemHTML);
         $('.choose').addClass('flex');
-        $('.choose').show();
         displayChoice(randomItem);
+        displayOptions();
     });
+    
+}
+
+const displayOptions = () =>{
+    $('.choose').hide(); 
+    let delayTime = num * 150;
+    $(".choose").delay(delayTime).fadeIn(1000);
+    
 }
 
 const displayChoice = (randomItem, answerHTML) =>{
@@ -52,8 +92,8 @@ const displayChoice = (randomItem, answerHTML) =>{
         answerHTML = `
         <div class="answerSection">
             <p>${randomItem.answer}</p>
-            </div>
-            <div class="image">
+        </div>
+        <div class="image">
             <img src="./images/gordy.jpeg">
         </div>
         `
@@ -68,7 +108,6 @@ const displayChoice = (randomItem, answerHTML) =>{
         const answerHTML = `
         <div class="answerSection">
             <p>${randomItem.falseAnswer}</p>
-            
         </div>
         <div class="image">
             <img src="./images/angel.png">
@@ -89,6 +128,7 @@ const restart = () =>{
 }
 
 
-        $(function () {
-            initGame();
-        });
+
+$(function () {
+    initGame();
+});

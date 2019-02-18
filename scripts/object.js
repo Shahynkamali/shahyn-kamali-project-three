@@ -12,8 +12,10 @@ class Food {
         return `A ${this.name} is a ${this.type} that typically is consumed in ${this.location}`
     }
     
-
 }
+
+
+
 
 const foodOne = new Food('hamburger', "./images/burger.png", true, "sandwich", 'restaurant/snackbar', "i couldnt care less what you put on your burger.. i mean its a burger! You go live that vanilla life!" );
 const foodTwo = new Food('hotdog', "./images/hotdog.png", false, "sandwich", "outdoor venues", "HELL TO THE NO!, What are you a six year old? It is unacceptable to put ketchup on a hotdog." ,"The National Hot Dog and Sausage Council recently came out in disapproval of adults using ketchup on hot dogs. In a guide to hot dog etiquette, the organization decreed that for those 18 years of age and older, acceptable wiener toppings include mustard, relish, onions, cheese and chili");
@@ -23,6 +25,4 @@ const foodFive = new Food('pizza', './images/pizza.png', false, "entree", "snack
 const foodSix = new Food('cheese sandwich', './images/sandwich.png')
 const foodArray = [];
 foodArray.push(foodOne, foodTwo, foodThree, foodFour, foodFive, foodSix);
-
-
 
