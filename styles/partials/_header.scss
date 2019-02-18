@@ -2,11 +2,14 @@
 
 header{
     max-width: 1600px;
-    width:100%;
+    width:65%;
     display: flex;
     justify-content: center;
-    background:black;
     padding: 2% 0;
+    border: 5px solid black;
+    border-radius: 40px;
+    margin:1%;
+    box-shadow: 18px -6px red;
     
     h1{
         font-family: ketchup;

@@ -195,10 +195,8 @@ body {
 }
 
 main {
-  border: 1px solid red;
   width: 1300px;
-  background: white;
-  height: 100vh;
+  height: 50vh;
 }
 
 section {
@@ -232,20 +230,24 @@ section .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
 header {
   max-width: 1600px;
-  width: 100%;
+  width: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: black;
   padding: 2% 0;
+  border: 5px solid black;
+  border-radius: 40px;
+  margin: 1%;
+  -webkit-box-shadow: 18px -6px red;
+          box-shadow: 18px -6px red;
 }
 
 header h1 {
@@ -256,6 +258,7 @@ header h1 {
 }
 
 button {
+  position: relative;
   background-color: white;
   border: 3px solid black;
   color: black;
@@ -267,6 +270,17 @@ button {
   width: 200px;
   border-radius: 40px;
   font-size: 30px;
+}
+
+button:active {
+  -webkit-box-shadow: 3px 0 red;
+          box-shadow: 3px 0 red;
+  left: 12px;
+}
+
+button:hover {
+  color: white;
+  background: darkgreen;
 }
 
 .choose {
@@ -303,6 +317,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  width: 100%;
 }
 
 .randomItem h2 {
@@ -311,11 +326,11 @@ button {
   color: darkgreen;
   text-shadow: 3px 0px black;
   letter-spacing: 2px;
-  padding: 3% 0;
+  padding: 1% 0;
 }
 
 .randomItem img {
-  width: 100%;
+  width: 90%;
 }
 
 .answerFlex {
@@ -378,13 +393,14 @@ button {
 
 .bottle {
   width: 28%;
+  height: 0;
+  margin-top: 2%;
 }
 
 .bottle img {
-  max-width: 80%;
   width: 28%;
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   right: 0;
   bottom: 0;

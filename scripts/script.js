@@ -10,24 +10,6 @@ anime({
     loop: false
 });
 
-
-const playAudio = () =>{
-    const sound = document.getElementById("myAudio");
-    sound.play();
-}
-
-const dropKetchup = () =>{
-    $('.squirtEffect').on('click', function () {
-        playAudio();
-        $('.box').addClass('drop');
-        setTimeout(function () {
-            $('.box').removeClass('drop');
-        }, 1000);
-    });
-}
-
-
-
 let i = 0;
 const time = 150;
 const imageArray = [];
@@ -53,15 +35,21 @@ const changeImg = () =>{
 
 const angryGordy = (answerHTML) =>{
     $('.answer').removeClass('block').addClass('answerFlex').html(answerHTML);
+        $(".answer").animate({
+            left: '250px',
+            opacity: '1',
+            height: 'auto',
+            width: '100%'
+        });
     
     
 }
 
 const initGame = (randomItem) =>{
-    $('svg').delay(4000).fadeOut();
+    $('svg').delay(4000).fadeOut()
     $(".pickChoice").click(function (e) {
         e.preventDefault();
-        $('.ketchupBottle').hide();
+        $('.bottle').hide();
         $('.item').hide();
         $('.choose').hide();
         changeImg()
