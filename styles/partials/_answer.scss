@@ -1,14 +1,11 @@
-.answerFlex{
+.answer{
     display:flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    
-}
 
-.block{
-    display: none;
+
+.answerSection.angel{
+    margin-top: 2%;
 }
 
 
@@ -17,9 +14,9 @@
     position: relative;
     background:red;
     border-radius: .4em;
-    margin-top: 5%;
+    margin-top: 15%;
     width: 50%;
-    height:10%;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
 
@@ -45,3 +42,4 @@
     margin-right: -20px;
 }
 
+}

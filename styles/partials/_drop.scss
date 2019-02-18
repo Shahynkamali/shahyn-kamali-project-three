@@ -1,23 +1,29 @@
+.svgItem{
+    width:45%;
+    position: relative;
+}
 .bottle{
-    width:28%;
+    width:100%;
     height:0;
     margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 
     img {
-        width: 28%;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 300px;
         margin: auto;
         opacity: 0;
         animation-name: show;
-        animation-delay: 4s;
+        animation-delay: 4.7s;
         animation-duration: 2s;
         animation-fill-mode: forwards;
         animation-iteration-count: 1;
         animation-timing-function: linear;
+        position: absolute;
     }
     @keyframes show {
         to {

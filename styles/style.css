@@ -181,6 +181,66 @@ html {
   font-style: normal;
 }
 
+.svgItem {
+  width: 45%;
+  position: relative;
+}
+
+.bottle {
+  width: 100%;
+  height: 0;
+  margin-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bottle img {
+  width: 100%;
+  max-width: 100%;
+  min-width: 300px;
+  margin: auto;
+  opacity: 0;
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  position: absolute;
+}
+
+@-webkit-keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  max-width: 1300px;
+  width: 100%;
+  height: 50vh;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,13 +254,8 @@ body {
           align-items: center;
 }
 
-main {
-  width: 1300px;
-  height: 50vh;
-}
-
 section {
-  max-width: 1600px;
+  max-width: 1200px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,7 +270,7 @@ section {
 }
 
 section .wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,7 +285,7 @@ section .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1% 0;
+  margin: .5% 0;
 }
 
 header {
@@ -248,6 +303,9 @@ header {
   margin: 1%;
   -webkit-box-shadow: 18px -6px red;
           box-shadow: 18px -6px red;
+  background: #F4D99D;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header h1 {
@@ -280,7 +338,8 @@ button:active {
 
 button:hover {
   color: white;
-  background: darkgreen;
+  background: black;
+  border: white;
 }
 
 .choose {
@@ -333,7 +392,31 @@ button:hover {
   width: 90%;
 }
 
-.answerFlex {
+.question {
+  width: 50%;
+  /* position: relative; */
+  display: none;
+}
+
+.question img {
+  width: 30%;
+}
+
+.question img:hover {
+  cursor: pointer;
+}
+
+.question p {
+  font-family: 'Suez One',serif;
+  margin: 30px;
+  border: 5px solid black;
+  padding: 14px 9px;
+  border-radius: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.answer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,25 +425,19 @@ button:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.block {
-  display: none;
+.answer .answerSection.angel {
+  margin-top: 2%;
 }
 
-.answerSection {
+.answer .answerSection {
   position: relative;
   background: red;
   border-radius: .4em;
-  margin-top: 5%;
+  margin-top: 15%;
   width: 50%;
-  height: 10%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,13 +447,13 @@ button:hover {
           flex-direction: row-reverse;
 }
 
-.answerSection p {
+.answer .answerSection p {
   font-family: 'Suez One',serif;
   color: white;
   padding: 10px;
 }
 
-.answerSection:after {
+.answer .answerSection:after {
   content: '';
   position: absolute;
   right: 0;
@@ -391,44 +468,94 @@ button:hover {
   margin-right: -20px;
 }
 
-.bottle {
-  width: 28%;
-  height: 0;
-  margin-top: 2%;
+footer {
+  position: relative;
 }
 
-.bottle img {
-  width: 28%;
+footer .footerText {
   position: absolute;
-  top: 100px;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  margin: auto;
-  opacity: 0;
-  -webkit-animation-name: show;
-          animation-name: show;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
-@-webkit-keyframes show {
-  to {
-    opacity: 1;
+@media only screen and (max-width: 900px) {
+  header h1 {
+    padding: 10px;
+  }
+  .bottle img {
+    left: -34px;
   }
 }
 
-@keyframes show {
-  to {
-    opacity: 1;
+@media only screen and (max-width: 700px) {
+  .image {
+    display: none;
+  }
+  .question {
+    width: 60%;
+  }
+  .answer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    margin-top: 20px;
+  }
+  section .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #Capa_1 {
+    width: 300px;
+  }
+  .question {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .question img {
+    position: static;
+  }
+  .question p {
+    text-align: center;
+    margin: 0;
+  }
+  .flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .flex button {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header h1 {
+    font-size: 2.3rem;
+    margin-right: 10px;
+    text-align: center;
+    padding: 2px;
+  }
+  header button {
+    width: 144px;
+  }
+  .svgItem {
+    margin-right: 65px;
+  }
+  .question p {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

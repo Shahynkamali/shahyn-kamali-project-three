@@ -9,7 +9,7 @@ class Food {
         this.falseAnswer = falseAnswer;
     }
     description(){
-        return `A ${this.name} is a ${this.type} that typically is consumed in ${this.location}`
+        return `${this.name} is a ${this.type} that typically is consumed in ${this.location}`
     }
     
 }

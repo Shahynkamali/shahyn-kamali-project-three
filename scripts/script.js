@@ -33,16 +33,9 @@ const changeImg = () =>{
 }
 
 
+
 const angryGordy = (answerHTML) =>{
-    $('.answer').removeClass('block').addClass('answerFlex').html(answerHTML);
-        $(".answer").animate({
-            left: '250px',
-            opacity: '1',
-            height: 'auto',
-            width: '100%'
-        });
-    
-    
+    $('.answer').html(answerHTML) 
 }
 
 const initGame = (randomItem) =>{
@@ -63,6 +56,7 @@ const initGame = (randomItem) =>{
         $('.choose').addClass('flex');
         displayChoice(randomItem);
         displayOptions();
+        getDescription(randomItem);
     });
     
 }
@@ -71,12 +65,22 @@ const displayOptions = () =>{
     $('.choose').hide(); 
     let delayTime = num * 150;
     $(".choose").delay(delayTime).fadeIn(1000);
+    $('.question').delay(delayTime).fadeIn();
     
+}
+
+const getDescription = (randomItem) =>{
+    $(".mark").click(function (e) { 
+        e.preventDefault();
+        const descHTML = `<p>${randomItem.description()}</p>`
+        $(".question").html(descHTML);
+    });
 }
 
 const displayChoice = (randomItem, answerHTML) =>{
     $(".yes").click(function (e) {
         e.preventDefault();
+        $('.question').hide()
         answerHTML = `
         <div class="answerSection">
             <p>${randomItem.answer}</p>
@@ -93,8 +97,9 @@ const displayChoice = (randomItem, answerHTML) =>{
     
     $(".no").click(function (e) {
         e.preventDefault();
+        $('.question').hide()
         const answerHTML = `
-        <div class="answerSection">
+        <div class="answerSection angel">
             <p>${randomItem.falseAnswer}</p>
         </div>
         <div class="image">
