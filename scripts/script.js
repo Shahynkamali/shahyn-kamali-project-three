@@ -34,10 +34,10 @@ const changeImg = () =>{
         $('.pickChoice').hide();
         $('.item').show();
     }
-    console.log("this is the interval" + interval)
+
 }
 
-console.log("this is the number" + num)
+
 /* DISPLAYS THE ANSWER IN THE HTML */
 
 const angryGordy = (answerHTML) =>{
