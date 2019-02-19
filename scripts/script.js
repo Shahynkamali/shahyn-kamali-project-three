@@ -15,9 +15,11 @@ anime({
 
 /* FUNCTION THAT PULLS THE IMAGES FROM THE OBJECT AND PUSHES THEM IN AN OBJECT AND CREATES A SLIDESHOW */
 let i = 0;
-const time = 150;
+const time = 180;
 const imageArray = [];
-const num = Math.floor(Math.random() * 100 + 1);
+const min = 10;
+const max = 80;
+const num = Math.floor(Math.random() * (max - min + 1)) + min;
 foodArray.forEach(food => imageArray.push(food.img));
 
 const changeImg = () =>{
@@ -28,14 +30,16 @@ const changeImg = () =>{
         i = 0
     }
     const interval = setTimeout('changeImg()', time);
-    if (interval == num){
+    if (interval === num){
         clearInterval(interval);
         $('.slideshow').hide();
         $('.pickChoice').hide();
         $('.item').show();
     }
+    console.log("this is the interval" + interval)
 }
 
+console.log("this is the number" + num)
 /* DISPLAYS THE ANSWER IN THE HTML */
 
 const angryGordy = (answerHTML) =>{
@@ -68,7 +72,7 @@ const initGame = (randomItem) =>{
 /* FUNCTION THAT DISPLAYS THE YES OR NO AND THE QUESTIONMARK */
 const displayOptions = () =>{
     $('.choose').hide(); 
-    let delayTime = num * 150;
+    let delayTime = num * 170;
     $(".choose").delay(delayTime).fadeIn(1000);
     $('.question').delay(delayTime).fadeIn();
     
