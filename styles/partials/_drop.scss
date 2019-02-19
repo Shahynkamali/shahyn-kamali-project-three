@@ -1,5 +1,5 @@
 .svgItem{
-    width:45%;
+    width:80%;
     position: relative;
 }
 .bottle{
@@ -24,6 +24,8 @@
         animation-iteration-count: 1;
         animation-timing-function: linear;
         position: absolute;
+
+
     }
     @keyframes show {
         to {

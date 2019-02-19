@@ -168,7 +168,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   padding: 0;
   margin: 0;
-  /* border: 1px solid black; */
 }
 
 html {
@@ -182,7 +181,7 @@ html {
 }
 
 .svgItem {
-  width: 45%;
+  width: 80%;
   position: relative;
 }
 
@@ -467,18 +466,6 @@ button:hover {
   margin-right: -20px;
 }
 
-footer {
-  position: relative;
-}
-
-footer .footerText {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 @media only screen and (max-width: 900px) {
   header h1 {
     padding: 10px;
@@ -512,8 +499,8 @@ footer .footerText {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #Capa_1 {
-    width: 300px;
+  button {
+    font-size: 0.9rem;
   }
   .question {
     text-align: center;
@@ -549,9 +536,6 @@ footer .footerText {
   }
   header button {
     width: 144px;
-  }
-  .svgItem {
-    margin-right: 65px;
   }
   .question p {
     font-size: 0.8rem;

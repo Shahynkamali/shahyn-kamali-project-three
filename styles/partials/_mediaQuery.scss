@@ -33,10 +33,9 @@ header h1{
         flex-direction: column;
 
     }
-    #Capa_1{
-        width: 300px;
+    button{
+        font-size:0.9rem;
     }
-
     .question{
         text-align: center;
         margin-top:20px;
@@ -55,6 +54,7 @@ header h1{
         justify-content: center;
 
         button{
+
             margin:10px;
         }
 
@@ -74,10 +74,10 @@ header h1{
     header button{
         width: 144px;
     }
-    .svgItem {
-        margin-right: 65px;
-    }
     .question p{
         font-size: 0.8rem;
+
+
     }
+
 }
