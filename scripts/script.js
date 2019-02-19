@@ -15,11 +15,9 @@ anime({
 
 /* FUNCTION THAT PULLS THE IMAGES FROM THE OBJECT AND PUSHES THEM IN AN OBJECT AND CREATES A SLIDESHOW */
 let i = 0;
-const time = 250;
+const time = 150;
 const imageArray = [];
-const min = 10;
-const max = 80;
-const num = Math.floor(Math.random() * (max - min + 1)) + min;
+const num = Math.floor(Math.random() * 90 +1);
 foodArray.forEach(food => imageArray.push(food.img));
 
 const changeImg = () =>{
