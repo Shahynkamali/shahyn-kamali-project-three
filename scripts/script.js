@@ -1,3 +1,5 @@
+
+/* JS LIBRARY CREATES THE SVG ANIMATION */
 anime({
     targets: '#Capa_1 .path',
     strokeDashoffset: [anime.setDashoffset, 0],
@@ -10,6 +12,8 @@ anime({
     loop: false
 });
 
+
+/* FUNCTION THAT PULLS THE IMAGES FROM THE OBJECT AND PUSHES THEM IN AN OBJECT AND CREATES A SLIDESHOW */
 let i = 0;
 const time = 150;
 const imageArray = [];
@@ -32,12 +36,12 @@ const changeImg = () =>{
     }
 }
 
-
+/* DISPLAYS THE ANSWER IN THE HTML */
 
 const angryGordy = (answerHTML) =>{
     $('.answer').html(answerHTML) 
 }
-
+/* INITS THE GAME AND DISPLAYS AN ITEM RANDOMLY CHOSEN */
 const initGame = (randomItem) =>{
     $('svg').delay(4000).fadeOut()
     $(".pickChoice").click(function (e) {
@@ -61,6 +65,7 @@ const initGame = (randomItem) =>{
     
 }
 
+/* FUNCTION THAT DISPLAYS THE YES OR NO AND THE QUESTIONMARK */
 const displayOptions = () =>{
     $('.choose').hide(); 
     let delayTime = num * 150;
@@ -69,6 +74,7 @@ const displayOptions = () =>{
     
 }
 
+/* FUNCTION THAT DISPLAYS THE INFORMATION ABOUT THE ITEM */
 const getDescription = (randomItem) =>{
     $(".mark").click(function (e) { 
         e.preventDefault();
@@ -77,6 +83,8 @@ const getDescription = (randomItem) =>{
     });
 }
 
+
+/* FUNCTION THAT DISPLAYS THE NEXT STATE AFTER THE USER CHOOSES YES OR NO */
 const displayChoice = (randomItem, answerHTML) =>{
     $(".yes").click(function (e) {
         e.preventDefault();
@@ -109,6 +117,8 @@ const displayChoice = (randomItem, answerHTML) =>{
         angryGordy(answerHTML);
     });
 }
+
+/* FUNCTION THAT RESTARTS THE GAME */
 
 const restart = () =>{
     $('.choose').hide();
